@@ -13,6 +13,10 @@ git log (ve o que as acoes tomadas, os commit feitos e mesnagem) (ve os pontos n
 git log --name-status (da mais detalhes do log)
 git diff (7 primeiros caracteres do log) => mostra as diferencas no arquivo comitado
 
+git diff (7 carat log prim commit) (7caract 2 commit) => compara um commit com outro
+
+git rm nomeDoArquivoDeletado => retira o arquivo deletado para preparar para o commit
+
 git status (mostra o que esta sendo ou foi modificado apos o ultimo commit e o que está  sendo visto, mas nao esta no historico do git)
 
 o git commit coloca nossos dados no git apos termos usado o git add . (esse modo pega tudo)
