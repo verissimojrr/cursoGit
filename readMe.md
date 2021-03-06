@@ -10,12 +10,14 @@ git config -l (lista os dados de config do momento)
 Só consegue commitar se tiver esses dados!!
 
 git log (ve o que as acoes tomadas, os commit feitos e mesnagem) (ve os pontos na historia)
+git log --name-status (da mais detalhes do log)
+git diff (7 primeiros caracteres do log) => mostra as diferencas no arquivo comitado
 
 git status (mostra o que esta sendo ou foi modificado apos o ultimo commit e o que está  sendo visto, mas nao esta no historico do git)
 
 o git commit coloca nossos dados no git apos termos usado o git add . (esse modo pega tudo)
 
-git diff (mostra o que foi modificado no documento)
+git diff (mostra as diferencas, o que foi modificado no documento)
 
 digitar o 'Q' pra poder sair do log
 
@@ -40,4 +42,3 @@ git remote -v (mostra os repositorios remotos)
 git branch -M main
 git push -u origin master (empurra o repositorio local para o repositorio online. Na primeira vez precisa fazer isso, das vezes que atualizar, acho que so precisa do git push mesmo)
 
-deu zica?
