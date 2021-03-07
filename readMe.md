@@ -55,6 +55,11 @@ git branch nomeDaBranch => cria uma ramificacao, normalmente feita para novas fe
 git checkout nomeDaBranch => entra na branch selecionada
 
 o git por padrao nao salva diretorio vazio
+ao entrar em um branch e outro,  percebe-se que diretorios aparecem e somem, pois cada branch tem sua historia
+
+se estiver em outro branch e modificar um arquivo que esta na master, ele so permite fazer o checkout se commitar ou tirar do staging area
+
+
 
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
