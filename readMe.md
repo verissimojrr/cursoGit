@@ -12,7 +12,7 @@ Só consegue commitar se tiver esses dados!!
 git log (ve o que as acoes tomadas, os commit feitos e mesnagem) (ve os pontos na historia)
 git log --name-status (da mais detalhes do log)
 git diff (7 primeiros caracteres do log) => mostra as diferencas no arquivo comitado
-
+git diff --staged => mostra os detalhes do que foi alterado no arquivo
 git diff (7 carat log prim commit) (7caract 2 commit) => compara um commit com outro
 
 git rm nomeDoArquivoDeletado => retira o arquivo deletado para preparar para o commit
@@ -93,6 +93,34 @@ se Vitor for trabalhar no arquivo dele e tentar enviar seu arquivo, sem dar um "
 git pull origin master (para ele poder receber meu arquivo index.html e atualizar qualquer arquivo que tiver)
 
 sempre que for comecar a trabalhar em equipe, fazer primeiro o pull pra atualizar
+
+no controle de versao centralizado, sempre que alguem tiver mexendo em um arquivo, nao sera possivel outra pessoa editar. O de versao distribuido é  descentralizado, varias pessoas podem acessar os mesmos arquivos, dando mais velocidade na programacao. Sempre fazer um pull quando for comecar a trabalhar,  senao pode dar conflito.
+
+Usar   uma branch por feature.
+para evitar varios commits por besteira, pode  usar o:
+ git commit -m "kcdkjks" --amend (usar so se nao tiver dado push pro servidor, senao da conflito...se tiver so na sua mamquina, pode fazer)
+
+ git merge --abort => aborta o commit feito antes
+ pode analisar o que aconteceu, com git diff
+
+ verificar como  funciona o meld e se o vscode  consegue fazer o mesmo
+
+ git checkout nomeDoArquivoQueDesistiuDeModificar => retorna ao status anterior do arquivo
+ git diff -w => nao mostra alteracoes com espaco, so problema de texto
+
+ apos git log --oneline:
+ git checkout 7primDigitosDoCommit => votla no tempo, podendo corrigir erros da epoca do log
+ o git recomenda criar uma nova branch para manipular esses arquivos: git checkout -b voltandoNoTempo
+
+ git checkout master => volta ao tempo normal de novo
+
+o ideal é   o commit ter pouco codigo, organizado e claro, pra poder seencnotrar com mais facilidade
+git checkout nomeDaBranchQueQuerIr -b subBranchCriada => cria uma sub branch estando em outra branch que nao é a que a da subbranch
+ex: git checkout 1234567 -b voltaParaReparo
+
+git stash => deixa pra depois em determinado arquivo, sem perder os dados. salva o working directory
+git stash list => lista
+git stash apply => volta para o working directory salvo
 
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
