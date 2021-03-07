@@ -64,6 +64,36 @@ git merge nomeDoBranchASerAdicionadoAMaster => mescla o branch escolhido com a m
 o ideal é criar uma branch dev e modificar la. so jogar pra master o tiver funcionando, versao final. A dev é beta.
 vai criando novas branches para se trabalhar isolado...depois faz um merge de tudo na dev e se tiver tudo ok, pra master no final
 
+o git é um reositorio local, so voce possui.
+uma boa pratica na criacao do repositorio é que sua pasta repositorio tenha o mesmo nome do seu projeto, com o final .git nela (ex: /myproject.git)
+
+para criar um diretorio que vai ser o repositorio, é so dentro do diretorio escolhido digitar:
+git init --bare (claro que criar um repositorio na mesma maquina nao faz sentido, ela deve ficar em um servidor para que outros particpantes utilizem, é so pra estudar)
+
+para sincronizar, quando tiver na pasta original, digitar:
+git remote add origin caminhoParaAPastaRepositorio (C:/projetos/aulaGit.git/)
+
+git remote -v => para visualizar
+git push origin master => "empurre para o meu repositorio - myproject.git - o que tiver na minha maquina de origem, e coloque dentro da branche master
+
+git push origin dev => dentro da branch dev, fazer isso pra jogar la no repositorio.git
+
+simulando trabalho em grupo, onde tem um pasta servidor/ecomerce.git (dentro dela digito git init --bare)
+
+...e na verissimo/ecomerce (onde irei trabalhar), dentro da pasta verissimo/ecomerce, digito git init
+depois digito git remote add origin caminho do ecomerce.git
+depois testa com git remote -v
+
+para criar para vitor e artur, basta clonar
+git clone C:/projetos/time/servidor/ecomerce.git/ (ele ja criar ate a pasta ecomerce). Apartir dai eles ja podem trabalhar juntos.
+
+apos um arquivo ou trabalho ser concluido, dentro da sua pasta, add, commit e dar um git push origin master (dessa forma eu crio a branch master no servidor e o servider ja ve meu log e outras pessoas)
+
+se Vitor for trabalhar no arquivo dele e tentar enviar seu arquivo, sem dar um "pull" no servidor, vai dar um erro.
+git pull origin master (para ele poder receber meu arquivo index.html e atualizar qualquer arquivo que tiver)
+
+sempre que for comecar a trabalhar em equipe, fazer primeiro o pull pra atualizar
+
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
 git show => mostra o ultimo ponto commitado
