@@ -32,7 +32,7 @@ git commit -a -m "mensagem:..." => commita sem precisar passar pelo processo da 
 
 se colocar so o git commit abre um editor de texto..melhor pra usar no github
 git config --global -e (necessario modificar para "code --wait" o editor)
-git config --global core.editor code (configurei o vscode, pra ver se da certo)
+git config --global core.editor code (configurei o vscode, pra ver se da certo...deu certo)
 
 git status (mostra o que esta sendo ou foi modificado apos o ultimo commit e o que está  sendo visto, mas nao esta no historico do git)
 
@@ -41,6 +41,20 @@ o git commit coloca nossos dados no git apos termos usado o git add . (esse modo
 git diff (mostra as diferencas, o que foi modificado no documento)
 
 digitar o 'Q' pra poder sair do log
+
+git log --pretty=oneline => deixa mais bonito os log
+git log --abbrev-commit => abrevia o log
+git log --pretty=oneline --abbrev-commit => tudo junto
+git log --stat => da estatiticas do log
+git log -p => mostra a alteracao que foi feita no arquivo e por quem
+git log -p -3 => mostra as ultimas 3 alteracoes
+
+git branch => mostra a branch atual
+git branch nomeDaBranch => cria uma ramificacao, normalmente feita para novas features, para nao danificar a versao anterior. O que e feito em uma branch nao afeta a outra...e criado uma referencia da anterior na nova branch, os logs sao os mesmos do anterior. Pode fazer um merge futuramente e mesclar a branch antiga e a nova
+
+git checkout nomeDaBranch => entra na branch selecionada
+
+o git por padrao nao salva diretorio vazio
 
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
