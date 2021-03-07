@@ -26,7 +26,13 @@ git rm -rf nomeDoDiretorio/ --cached (retira o o diretorio da staging area, mas 
 
 git add --all ou git add -A (faz as  adicoes de arquivos e delecoes, se houver...so o add nao remove arquivo deletado)
 
-git commit -a -m "mensagem:..." => commita sem precisar passar pelo processo da adicao na staging area
+git config --global core.excludesfile ~/.gitIgnore => coloca globalmente um .gitIgnore por padrao
+
+git commit -a -m "mensagem:..." => commita sem precisar passar pelo processo da adicao na staging area (cuidado pra nao querer ser muito rapido e fazer besteira)
+
+se colocar so o git commit abre um editor de texto..melhor pra usar no github
+git config --global -e (necessario modificar para "code --wait" o editor)
+git config --global core.editor code (configurei o vscode, pra ver se da certo)
 
 git status (mostra o que esta sendo ou foi modificado apos o ultimo commit e o que está  sendo visto, mas nao esta no historico do git)
 
