@@ -61,7 +61,8 @@ se estiver em outro branch e modificar um arquivo que esta na master, ele so per
 
 git merge nomeDoBranchASerAdicionadoAMaster => mescla o branch escolhido com a master
 
-o ideal é criar uma branch dev e modificar la. so jogar pra master o tiver funcionando, versao final. A dev é beta
+o ideal é criar uma branch dev e modificar la. so jogar pra master o tiver funcionando, versao final. A dev é beta.
+vai criando novas branches para se trabalhar isolado...depois faz um merge de tudo na dev e se tiver tudo ok, pra master no final
 
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
