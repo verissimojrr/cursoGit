@@ -16,10 +16,17 @@ git diff (7 primeiros caracteres do log) => mostra as diferencas no arquivo comi
 git diff (7 carat log prim commit) (7caract 2 commit) => compara um commit com outro
 
 git rm nomeDoArquivoDeletado => retira o arquivo deletado para preparar para o commit
+git rm -r nomeDoDiretorioASerDeletado => remove um diretorio indesejado do git
 pelo git diff e usando o log, é possivel recuperar os dados de um arquivo deletado
+
+git add -f nomeDoArquivoOuDiretorio => força a adicao de um arquivo que esta no gitIgnore
+git rm -r -f nomeDoDiretorio => forcaa remocao de um diretorio
+
+git rm -rf nomeDoDiretorio/ --cached (retira o o diretorio da staging area, mas nao do diretorio de trabalho)
 
 git add --all ou git add -A (faz as  adicoes de arquivos e delecoes, se houver...so o add nao remove arquivo deletado)
 
+git commit -a -m "mensagem:..." => commita sem precisar passar pelo processo da adicao na staging area
 
 git status (mostra o que esta sendo ou foi modificado apos o ultimo commit e o que está  sendo visto, mas nao esta no historico do git)
 
