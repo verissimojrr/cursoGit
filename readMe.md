@@ -121,6 +121,8 @@ ex: git checkout 1234567 -b voltaParaReparo
 git stash => deixa pra depois em determinado arquivo, sem perder os dados. salva o working directory
 git stash list => lista
 git stash apply => volta para o working directory salvo
+git stash drop stash@{numero} => deleta o stash
+git stash pop
 
 git show bb9c76d96b554aa950937aaac34e6c5f0bc18c50 (esta sequencia é um ponto salvo) => mostra o que foi modificado neste ponto
 
