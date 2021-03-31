@@ -145,3 +145,6 @@ git remote -v (mostra os repositorios remotos)
 git branch -M main
 git push -u origin master (empurra o repositorio local para o repositorio online. Na primeira vez precisa fazer isso, das vezes que atualizar, acho que so precisa do git push mesmo)
 
+para excluir arquivo grande erroneamente comitado:
+git filter-branch --tree-filter 'rm -rf path/to/your/file' HEAD
+git push
